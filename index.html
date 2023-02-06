@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- -------Chamada das folhas de estilos--------- -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/media-query.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	
+	<!-- --------------------------------------------- -->
+	<link rel="icon" type="image/x-icon" href="imagens/icones/Carrinho.png">
+	<title> SnollShop </title>
+
+</head>
+<body>
+	<header> <!-- Inicio do Cabecalho -->
+		<nav id="flex-menu"> <!-- Menu de navegação -->
+			<div class="container-humburgue" onclick="abrirMenu(this)">
+				<div class="barra1"></div>
+				<div class="barra2"></div>
+				<div class="barra3"></div>
+			</div>
+
+			<div class="flex-logo"> <!-- Logo -->
+				<a href=""><img src="imagens/icones/eco-logo.png"></a>
+			</div>
+
+			<div class="flex-itens"> <!---- menu ------->
+				<ul>
+					<li><a href=""> Inicio </a></li>
+					<li><a href=""> Produto </a></li>
+					<li><a href=""> Categoria </a></li>
+					<li><a href=""> Sobre </a></li>
+					<li><a href=""> Contato </a></li>
+				</ul>
+			</div> 
+
+ 
+			<div class="flex-login"> 
+				<span class="btn-lgn" onclick="document.getElementById('id-login').style.display='block'"><i class="fas fa-user-alt"></i></span>
+				<div class="dropdown">
+					<span class="btn-lgn"> 
+						<i class="fa fa-caret-down"></i>
+					</span>
+					<div class="dropdown-content">
+						<a href="#">Link 1</a>
+						<a href="#">Link 2</a>
+						<a href="#">Link 3</a>
+					</div>
+				</div>
+			</div>
+
+			<div id="id-login" class="modal">
+	
+		<form class="modal-login animate" action="login.php" method="post">
+
+				<div class="imagem-container">
+					<span onclick="document.getElementById('id-login').style.display='none'" class="fechar" title="fechar Modal"> &times; </span>
+					<img src="imagens/icones/zombie.png" class="avatar">
+				</div>
+
+			<div class="container">
+				<label for="nome"> <b>Nome</b> </label>
+				<input type="e-mail" placeholder="Digite se nome" name="nome" required>
+
+				<label for="Senha"> <b>Senha</b> </label>
+				<input type="password" placeholder="Digite sua senha" name="senha" required>
+		
+				<button type="submit"> Entrar </button>
+				<label>
+				<input type="checkbox" checked="checked" name="remember"> Lembrar-me senha
+				</label>
+			</div>
+
+			<div class="container" style="background-color:rgba(253, 253, 253, 0.841)">
+
+				<button type="button" onclick="document.getElementById('id-login').style.display='none'" class="fechar-btn-login"> Fechar </button>
+				<span class="senha"> Esqueceu <a href="esquecer-senha.html"> Senha? </a></span>
+			</div>
+		</form>
+			</div>
+			<!-- ----------Fim do login ---------------------------------------------------- -->
+
+
+			<div class="carrinho"> <!-- Carrinho -->
+				<li>
+					<span> 2 </span>
+					<img src="imagens/icones/Carrinho.png">
+				</li>
+			</div> <!-- Fim carrinho -->
+		</nav> <!-- Fim do menu de navegação -->
+
+		<div id="flex-buscar"> <!-- Barra de busca -->
+			<div class="buscar">
+				<input type="search" name="buscar" id="buscar">
+				<input type="button" value="buscar">
+			</div>
+		</div>
+		<div class="barra"></div>
+	</header> <!-- Fim do Cabecalho -->
+
+
+<!------------- Menu-mobile ----------------------------------------------------------------->
+
+	<div id="menu-mobile" class="nav-mobile">
+		<div class="logo-mobile">
+			<a href=""><img src="imagens/icones/mobile-logo.png"></a>
+			<a href="javascript:void(0)" class="fechar-btn" onclick="fecharMenu()">&times;</a>
+		</div>
+		<a href="">Inicio</a>
+		<a href="">Produto</a>
+		<a href="">Categoria</a>
+		<a href="">Sobre</a>
+		<a href="">Contato</a>
+	   </div>
+	<!-- Fim Menu-mobile -->
+
+ <!-- Slideshow container ---------------------------------------- -->
+	<div class="slideshow-container">
+
+	<!-- Full-width images with number and caption text -->
+	<div class="meuSlider esmaecer">
+	  <div class="numbertext">1 / 4</div>
+	  <img src="imagens/slider/img_mountains.jpg" style="width:100%">
+	  <div class="text">Caption Text</div>
+	</div>
+   
+	<div class="meuSlider esmaecer">
+	  <div class="numbertext">2 / 4</div>
+	  <img src="imagens/slider/Banner-3.jpg" style="width:100%">
+	  <div class="text">Caption Two</div>
+	</div>
+   
+	<div class="meuSlider esmaecer">
+	  <div class="numbertext">3 / 4</div>
+	  <img src="imagens/slider/img_snow.jpg" style="width:100%">
+	  <div class="text">Caption Three</div>
+	</div>
+
+	<div class="meuSlider esmaecer">
+		<div class="numbertext">4 / 4</div>
+		<img src="imagens/slider/img_wide.jpg" style="width:100%">
+		<div class="text">Caption Three</div>
+	   </div>
+   
+	<!-- Next and previous buttons -->
+	<a class="anterior" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="proximo" onclick="plusSlides(1)">&#10095;</a>
+   </div>
+   <br>
+   
+   <!-- The dots/circles -->
+   <div style="text-align:center">
+	<span class="ponto" onclick="currentSlide(1)"></span>
+	<span class="ponto" onclick="currentSlide(2)"></span>
+	<span class="ponto" onclick="currentSlide(3)"></span>
+	<span class="ponto" onclick="currentSlide(4)"></span>
+   </div> 
+   
+   <!-- FIM DOO SLIDER   ---------------------------------------------- -->
+
+	<!-- MAIN (Center website) -->
+	<div class="main">
+		
+		<!-- Inicio corpo do site -->
+		<div id="myBtnContainer">
+			<button class="btn active" onclick="filterSelection('all')"> Show all</button>
+			<button class="btn" onclick="filterSelection('nature')"> Nature</button>
+			<button class="btn" onclick="filterSelection('cars')"> Cars</button>
+			<button class="btn" onclick="filterSelection('people')"> People</button>
+		</div>
+		
+		<!-- Gallery Grid 01 -->
+		<div class="row">
+			<div class="column nature">
+				<div class="content">
+					<img src="imagens/mountains.jpg" alt="Mountains" style="width:100%">
+					<h4>Mountains</h4>
+					<p>Lorem ipsum dolor..</p>
+				</div>
+			</div>
+			<!-- Gallery Grid 02 -->
+			
+			<div class="column nature">
+				<div class="content">
+					<img src="imagens/lights.jpg" alt="Lights" style="width:100%">
+					<h4>Lights</h4>
+					<p>Lorem ipsum dolor..</p>
+				</div>
+			</div>
+			<!-- Gallery Grid 03 -->
+			
+			<div class="column nature">
+				<div class="content">
+					<img src="imagens/nature.jpg" alt="Nature" style="width:100%">
+					<h4>Forest</h4>
+					<p>Lorem ipsum dolor..</p>
+				</div>
+			</div>
+			<!-- Gallery Grid 04 -->
+			
+			<div class="column cars">
+				<div class="content">
+					<img src="imagens/cars1.jpg" alt="Car" style="width:100%">
+					<h4>Retro</h4>
+					<p>Lorem ipsum dolor..</p>
+				</div>
+			</div>
+			<!-- Gallery Grid 05 -->
+			
+			<div class="column cars">
+				<div class="content">
+					<img src="imagens/cars2.jpg" alt="Car" style="width:100%">
+					<h4>Fast</h4>
+					<p>Lorem ipsum dolor..</p>
+				</div>
+			</div>
+			<!-- Gallery Grid 06 -->
+			
+			<div class="column cars">
+				<div class="content">
+					<img src="imagens/cars3.jpg" alt="Car" style="width:100%">
+					<h4>Classic</h4>
+					<p>Lorem ipsum dolor..</p>
+				</div>
+			</div>
+			<!-- Gallery Grid 07 -->
+			
+			<div class="column people">
+				<div class="content">
+					<img src="imagens/people1.jpg" alt="Car" style="width:100%">
+					<h4>Girl</h4>
+					<p>Lorem ipsum dolor..</p>
+				</div>
+			</div>
+			<!-- Gallery Grid 08 -->
+			
+			<div class="column people">
+				<div class="content">
+					<img src="imagens/people2.jpg" alt="Car" style="width:100%">
+					<h4>Man</h4>
+					<p>Lorem ipsum dolor..</p>
+				</div>
+			</div>
+			<!-- Gallery Grid 09 -->
+			
+			<div class="column people">
+				<div class="content">
+					<img src="imagens/people3.jpg" alt="Car" style="width:100%">
+					<h4>Woman</h4>
+					<p>Lorem ipsum dolor..</p>
+				</div>
+			</div>
+			<!-- FIM GRID -->
+			
+		</div>
+		<!-- FIM MAIN -->
+	</div> 
+	
+	
+	<!-- Fim corpo do site -->
+
+
+
+	<footer> <!-- Inicio do footer -->
+		<div id="flex-footer">
+			<p><span>Copyright &copy</span> Todos direitos reservados | <span>FCODE TECH</span></p>
+		</div>
+
+		<div class="background">
+			<div class="footer-menu">
+				<div class="cadastrar">
+					<div class="txt">
+						<p>Ainda não possui cadastro? Cadstre-se agora!</p>	
+					</div>
+					<div class="cadast">
+						<input type="email" name="cadastrar" id="cadastrar">
+						<input type="button" value="cadastrar">
+					</div>
+				</div>
+				
+				<div class="menu">
+					<h2>Menu Navegação</h2>
+
+					<a href="">Inicio</a>
+					<a href="">Produto</a>
+					<a href="">Categoria</a>
+					<a href="">Sobre</a>
+					<a href="">Contato</a>
+				</div>
+				
+				<div class="sociais">
+					<h2>Redes Sociais</h2>
+
+					<a href="">Whatsap</a>
+					<a href="">Instagram</a>
+					<a href="">Youtube</a>
+					<a href="">Facebook</a>
+					<a href="">Linkedin</a>
+				</div>
+			</div>
+		</div>
+	</footer>  <!-- Fim do footer -->
+
+	<script src="javascript/script.js"></script>
+	<script src="https://kit.fontawesome.com/408dd0c91b.js" crossorigin="anonymous"></script>
+</body>
+</html>
